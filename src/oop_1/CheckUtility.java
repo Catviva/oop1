@@ -4,11 +4,13 @@ public class CheckUtility {
 
 
     public static String checkBrand(String brand) {
+
         return (brand == null || brand.isEmpty()) ? "default" : brand;
     }
 
 
     public static String checkModel(String model) {
+
         return (model == null || model.isEmpty()) ? "default" : model;
     }
 
