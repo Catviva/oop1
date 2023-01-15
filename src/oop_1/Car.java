@@ -1,15 +1,19 @@
 package oop_1;
 
+import oop_1.CheckUtility;
+
 public class Car {
 
-    private String brand;
-    private String model;
+    private final String brand;
+    private final String model;
     private double engineVolume;
     private String color;
-    private int year;
-    private String country;
+    private final int year;
+    private final String country;
 
-    public Car(String brand, String model, double engineVolume, String color, int year, String country) {
+
+    public Car(String brand, String model, double engineVolume,
+               String color, int year, String country) {
         this.brand = CheckUtility.checkBrand(brand);
         this.model = CheckUtility.checkModel(model);
         this.engineVolume = CheckUtility.checkEngineVolume(engineVolume);
@@ -22,25 +26,16 @@ public class Car {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-
-    }
-
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public double getEnineVolume() {
+    public double getEngineVolume() {
         return engineVolume;
     }
 
-    public void setEnineVolume(double enineVolume) {
-        this.engineVolume = enineVolume;
+    public void setEngineVolume(double engineVolume) {
+        this.engineVolume = engineVolume;
     }
 
     public String getColor() {
@@ -55,16 +50,8 @@ public class Car {
         return year;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     public String getCountry() {
         return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     @Override
